@@ -1,0 +1,29 @@
+.dashboard { display: flex; flex-direction: column; gap: 2rem; animation: slideIn 0.4s ease; }
+.balance-section { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center; }
+.balance-card { background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(131, 56, 236, 0.1)); border: 2px solid rgba(0, 212, 255, 0.3); }
+.balance-header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+.balance-amount { font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; }
+.balance-amount span { background: linear-gradient(135deg, #00d4ff, #06ffa5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.balance-footer { display: flex; justify-content: space-between; font-size: 0.85rem; color: #7a8398; }
+.btn-send { padding: 1.2rem 1.5rem; width: auto; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; display: flex; align-items: center; gap: 1rem; border-radius: 12px; transition: all 0.3s ease; }
+.stat-card:hover { border-color: var(--primary); background: var(--surface-light); }
+.stat-icon { font-size: 2rem; }
+.stat-value { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; }
+.transactions-card { flex: 1; }
+.empty-state { text-align: center; padding: 3rem; }
+.empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+.transactions-list { display: flex; flex-direction: column; gap: 1rem; }
+.transaction-item { background: var(--surface-light); border: 1px solid var(--border); padding: 1.2rem; display: flex; justify-content: space-between; align-items: center; border-radius: 10px; }
+.txn-info { flex: 1; }
+.txn-type { color: var(--primary); font-weight: 600; }
+.amount-out { color: var(--error); font-weight: 700; }
+.amount-in { color: var(--success); font-weight: 700; }
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.85rem; }
+@media (max-width: 768px) {
+  .balance-section { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .transaction-item { flex-direction: column; gap: 1rem; align-items: flex-start; }
+}
